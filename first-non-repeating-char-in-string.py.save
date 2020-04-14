@@ -1,0 +1,20 @@
+#code
+
+from collections import defaultdict
+
+n = int(input())
+
+for i in range(n):
+    a, b = int(input()), list(input())
+    res = defaultdict(list)
+    isPrint = True
+    for item in b:
+        res[item].append(item)
+    
+    
+    for (k,v) in res.items():
+        if(len(v) == 1 and isPrint): 
+            print(k)
+            isPrint = False
+        
+        
